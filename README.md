@@ -58,8 +58,15 @@ The random forest model showed that nutritional attributes and encoded recipe ca
 ### Feature Importance (Random Forest Classifier)
 The final model's predictive mechanism is defined by the following top 5 features:
 
+![Nutritional Distribution Plot](Images/featimport.png)
 
-![Nutritional Distribution Plot](Images/Screenshot2025-11-23074159.png)
+## Business Value
+This project supports the homepage selection process by reducing the chance of missing recipes that attract high traffic. The model’s behaviour is aligned with the business goal of prioritising recall, which ensures that high-impact recipes are consistently identified. The system is straightforward to monitor and adjust, and it provides a structured approach to guiding recipe selection that can improve user engagement and support subscription growth.
+
+## Recommendation for improvement
+Future development should focus on collecting additional recipe attributes, such as preparation time and cost per serving, since these elements are likely to improve predictive accuracy. Strengthening the process for recording traffic outcomes will reduce uncertainty in the target variable and improve model reliability. Recall should be monitored over time to ensure stable performance as new data becomes available, and further work may explore enhanced features or alternative models to balance recall and precision more effectively.
+
+
 
 
 
