@@ -28,9 +28,14 @@ The exploratory analysis showed that popular recipes make up around 60 percent o
 
 EDA visuals:
 Distribution plots for categories and target classes.
-![Target Distribution Plot](images/DPURecipe)
+
+![Target Distribution Plot](images/DPURecipe.png)
+
+![Category Distribution Plot](DistributionOfRecipeCategory.png)
 
 Boxplots comparing nutritional features across recipe popularity.
+
+![Nutritional Distribution Plot](images/distributionOfKeyNutritionalOfPopularRecipe.png)
 
 
 
