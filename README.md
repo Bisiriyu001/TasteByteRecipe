@@ -52,6 +52,15 @@ The default probability threshold of 0.50 did not reach the required recall leve
 ## Final Results
 The final model reached the required recall level after adjusting the prediction threshold, ensuring that popular recipes were rarely missed. Precision decreased as a result of this adjustment, since more recipes were classified as popular, but this trade-off is acceptable because the business places greater importance on capturing high-traffic recipes than on avoiding false positives. This outcome aligns the model’s behaviour with the project’s goal and supports reliable decision-making for homepage recipe selection.
 
+## Feature Importance
+The random forest model showed that nutritional attributes and encoded recipe categories had the strongest influence on the predictions. These features contributed most to the model’s ability to separate popular recipes from unpopular ones. This insight also highlighted which recipe characteristics currently drive traffic patterns and which areas offer opportunities for richer data collection in future versions of the model.
+
+### Feature Importance (Random Forest Classifier)
+The final model's predictive mechanism is defined by the following top 5 features:
+
+
+
+
 
 
 
