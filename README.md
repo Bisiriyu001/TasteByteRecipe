@@ -26,16 +26,33 @@ I repaired the non-numeric values in the servings column, standardised inconsist
 ## Exploratory Analysis
 The exploratory analysis showed that popular recipes make up around 60 percent of the dataset, while unpopular recipes account for the remaining 40 percent. Chicken and vegetable dishes appear most frequently across the categories, whereas other groups such as pork and potato are less common. The analysis also indicated that unpopular recipes generally have lower nutritional values. The boxplots comparing calories, sugar, carbohydrate and protein revealed that popular recipes tend to have higher values in these nutritional metrics, showing a clear difference between the two groups.
 
-EDA visuals:
+### EDA visuals:
 Distribution plots for categories and target classes.
 
-![Target Distribution Plot](images/DPURecipe.png)
+![Target Distribution](Images/DPURecipe.png)
 
-![Category Distribution Plot](DistributionOfRecipeCategory.png)
+![Category Distribution](Images/DistributionOfRecipeCategory.png)
 
 Boxplots comparing nutritional features across recipe popularity.
 
-![Nutritional Distribution Plot](images/distributionOfKeyNutritionalOfPopularRecipe.png)
+![Nutritional Distribution Plot](Images/distributionOfKeyNutritionalOfPopularRecipe.png)
+
+## Feature Engineering
+I prepared the data for modelling by transforming the category column using one-hot encoding so that each recipe type became a numerical feature. The final feature matrix combined the nutritional attributes, the servings value, and the encoded category variables. This produced a clean and fully numerical dataset suitable for training the classification models, while keeping the structure consistent with the project requirements.
+
+## Modelling
+I trained two supervised learning models for this project. The first was a logistic regression model, which served as the baseline for performance comparison. The second was a random forest classifier, selected as the comparison model because it captures non-linear relationships more effectively. Both models were trained using class weights set to “balanced” to address the moderate class imbalance in the target variable, and I used stratified train–test splits to ensure that the proportion of popular and unpopular recipes remained consistent across both sets.
+
+## Model Performance 
+The logistic regression model achieved a recall of about 0.69 for the Popular class, which set the baseline for performance. The random forest model performed better, reaching a recall of roughly 0.73. Based on this improvement, I selected the random forest model as the final model because it was more effective at identifying popular recipes and aligned more closely with the recall requirement for the project.
+
+## Threshold Tuning
+The default probability threshold of 0.50 did not reach the required recall level, so I evaluated a range of lower thresholds to understand how recall changed as the model classified more recipes as popular. As the threshold decreased, recall increased, and I selected the point where recall first met the 80 percent requirement. This choice reflects the business priority, because missing a high-traffic recipe carries a higher cost than incorrectly predicting that a low-traffic recipe will be popular.
+
+## Final Results
+The final model reached the required recall level after adjusting the prediction threshold, ensuring that popular recipes were rarely missed. Precision decreased as a result of this adjustment, since more recipes were classified as popular, but this trade-off is acceptable because the business places greater importance on capturing high-traffic recipes than on avoiding false positives. This outcome aligns the model’s behaviour with the project’s goal and supports reliable decision-making for homepage recipe selection.
+
+
 
 
 
