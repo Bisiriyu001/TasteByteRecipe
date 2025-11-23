@@ -11,7 +11,7 @@ Data validation, Data cleaning, Exploratory data analysis, Feature engineering, 
 The dataset contains 947 recipes with the following attributes or features:
 colaries, carbohydrate, sugar, protein, category, servings, high_traffic, recipe (identifier)
 
-##Target Definition
+## Target Definition
 The high_traffic column labels recipes that produced high traffic. Missing values were treated as Low traffic so that a complete binary target could be created. The target is defined as 1 for Popular and 0 for Unpopular.
 This setup aligns with the business requirement for a binary classification problem.
 
