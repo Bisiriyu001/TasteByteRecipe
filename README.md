@@ -59,6 +59,9 @@ The random forest model showed that nutritional attributes and encoded recipe ca
 The final model's predictive mechanism is defined by the following top 5 features:
 
 
+![Nutritional Distribution Plot](Images/Screenshot2025-11-23074159.png)
+
+
 
 
 
